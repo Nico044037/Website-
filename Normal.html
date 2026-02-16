@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onload="loaded()">Please Sign in to this website.</h1>
+    <input type="text" id="email" placeholder="email adress...">
+    <p></p>
+    <input type="text" id="username" placeholder="username...">
+    <p></p>
+    <input type="text" id="password" placeholder="password...">
+    <p></p>
+    
+   <button onclick="signIn()">Sign In</button>   
+   <p id="p"></p>
+</body>
+<script>
+let clicks = 0
+function signIn(){
+const  pswinput = document.getElementById("password")
+const error = document.getElementById("p")
+error.innerText = "Password cannot be " + pswinput.value
+error.style.textAlign = "center"
+error.style.color = "red"
+clicks ++
+if(clicks ===  5){
+    window.location.href = "Captcha.html"
+}
+}
+function loaded(){
+    clicks = 0
+}
+</script>
+<style>
+    body{
+        text-align: center;
+    }
+    button{
+        background-color: green;
+        border-radius: 15%;
+        height: 30px;
+        
+    }
+</style>
+</html>
