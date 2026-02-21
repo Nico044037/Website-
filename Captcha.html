@@ -14,7 +14,8 @@
     <p></p>
     <button id="button" onclick="click()"></button>               <button id="button" onclick="click()"></button>               <button onclick="click"></button>
     <p></p>
-</body>
+    <button onclick="go()">Submit</button>
+</body> 
 <script>
     let x = 0
     const button = document.getElementById("button")
@@ -23,10 +24,11 @@
         button.style.borderColor = "blue"
         x++;
     }
-    if(x === 1){
+    function go(){ if(x === 1){
     window.location = "NormalLevel2.html"
         x--;
     }
+}
 </script>
 <style>
     button{
@@ -42,3 +44,4 @@
 </style>
 
 </html>
+
